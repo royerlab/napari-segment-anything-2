@@ -1,0 +1,30 @@
+name: napari-segment-anything-2
+display_name: Segment Anything 2
+# use 'hidden' to remove plugin from napari hub search results
+visibility: public
+# see https://napari.org/stable/plugins/manifest.html for valid categories
+categories: ["Annotation", "Segmentation", "Acquisition"]
+contributions:
+  commands:
+    - id: napari-segment-anything-2.make_container_widget
+      python_name: napari_segment_anything_2:ImageThreshold
+      title: Make threshold Container widget
+    - id: napari-segment-anything-2.make_magic_widget
+      python_name: napari_segment_anything_2:threshold_magic_widget
+      title: Make threshold magic widget
+    - id: napari-segment-anything-2.make_function_widget
+      python_name: napari_segment_anything_2:threshold_autogenerate_widget
+      title: Make threshold function widget
+    - id: napari-segment-anything-2.make_qwidget
+      python_name: napari_segment_anything_2:ExampleQWidget
+      title: Make example QWidget
+  widgets:
+    - command: napari-segment-anything-2.make_container_widget
+      display_name: Container Threshold
+    - command: napari-segment-anything-2.make_magic_widget
+      display_name: Magic Threshold
+    - command: napari-segment-anything-2.make_function_widget
+      autogenerate: true
+      display_name: Autogenerate Threshold
+    - command: napari-segment-anything-2.make_qwidget
+      display_name: Example QWidget
