@@ -35,6 +35,13 @@ To install latest development version :
     pip install napari[all] git+https://github.com/JoOkuma/napari-segment-anything-2.git
 
 
+## Notes
+
+To load mp4 or other video files, you need to install `napari_video`.
+
+    pip install napari_video
+
+
 ## Contributing
 
 Contributions are very welcome. Tests can be run with [tox], please ensure
