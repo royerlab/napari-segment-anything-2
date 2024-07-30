@@ -25,13 +25,14 @@ https://napari.org/stable/plugins/index.html
 
 You can install `napari-segment-anything-2` via [pip]:
 
-    pip install napari-segment-anything-2
-
+    pip install git+https://github.com/jookuma/segment-anything-2@no-cc
+    pip install napari[all] napari-segment-anything-2
 
 
 To install latest development version :
 
-    pip install git+https://github.com/JoOkuma/napari-segment-anything-2.git
+    pip install git+https://github.com/jookuma/segment-anything-2@no-cc
+    pip install napari[all] git+https://github.com/JoOkuma/napari-segment-anything-2.git
 
 
 ## Contributing
