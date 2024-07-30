@@ -3,3 +3,4 @@ include README.md
 
 recursive-exclude * __pycache__
 recursive-exclude * *.py[co]
+recursive-include src/napari_segment_anything_2/configs *.yaml
