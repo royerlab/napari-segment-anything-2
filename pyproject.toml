@@ -29,6 +29,7 @@ dependencies = [
     "magicgui",
     "qtpy",
     "scikit-image",
+    "sam2 @ git+https://github.com/facebookresearch/segment-anything-2",
 ]
 
 [project.optional-dependencies]
@@ -51,8 +52,8 @@ napari-segment-anything-2 = "napari_segment_anything_2:napari.yaml"
 "User Support" = "https://github.com/JoOkuma/napari-segment-anything-2/issues"
 
 [build-system]
-requires = ["setuptools>=42.0.0", "wheel"]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [tool.setuptools]
 include-package-data = true
@@ -116,3 +117,9 @@ exclude = [
 
 target-version = "py38"
 fix = true
+
+[tool.hatch.version]
+path = "src/napari_segment_anything_2/__init__.py"
+
+[tool.hatch.metadata]
+allow-direct-references = true
