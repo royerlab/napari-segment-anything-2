@@ -9,6 +9,13 @@
 
 A napari plugin for Meta's Segment Anything 2 in Images and Videos
 
+https://github.com/user-attachments/assets/7ecc0e99-d6fd-42ad-bb2e-e903c04b6d9d
+
+It works a bit better in natural images
+
+https://github.com/user-attachments/assets/72037ceb-eabf-4222-bd2d-6c269ac582d6
+
+
 ----------------------------------
 
 This [napari] plugin was generated with [Cookiecutter] using [@napari]'s [cookiecutter-napari-plugin] template.
