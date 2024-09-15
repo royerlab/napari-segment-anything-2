@@ -62,7 +62,7 @@ class SAM2Widget(Container):
         self._im_layer_widget.changed.connect(self._load_image)
         self.append(self._im_layer_widget)
 
-        self._run_btn = PushButton(text="Run")
+        self._run_btn = PushButton(text="Auto. Segm.")
         self._run_btn.changed.connect(self._on_run)
         self.append(self._run_btn)
 
@@ -85,9 +85,9 @@ class SAM2Widget(Container):
         is_valid = False
         if im_layer is not None:
             image = im_layer.data
-            if im_layer.ndim != 3:
+            if im_layer.ndim != 3 or im_layer.ndim != 2:
                 print(
-                    "Image must have 3 (TYX) plus optional RGB channels. "
+                    "Image must have 2 (YX) or 3 (TYX) plus optional RGB channels. "
                     f"Got {image.ndim}"
                 )
             else:
@@ -176,6 +176,9 @@ class SAM2Widget(Container):
 
         image = self._im_layer_widget.value.data
         is_rgb = self._im_layer_widget.value.rgb
+
+        if self._im_layer_widget.value.ndim == 2:
+            image = image[None, ...]
 
         if not is_rgb:
             image = color.gray2rgb(image)
